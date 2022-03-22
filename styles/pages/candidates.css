@@ -1,0 +1,13 @@
+.candidates-container--empty {
+  width: 100%;
+  height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.candidates-empty-span {
+  color: #868eb7;
+  margin-top: 20px;
+}

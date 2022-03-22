@@ -1,0 +1,52 @@
+.employer-branding-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.candidate-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+.employer-branding-grid-c {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* gap: 20px; */
+}
+
+.branding-sub-title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  /* identical to box height */
+
+  /* 600 */
+  margin: 25px 0 -10px 0;
+  color: #262d42;
+}
+
+.branding-add {
+  color: #695ee8;
+  /* margin: 20px 0 0 0; */
+  cursor: pointer;
+  background-color: transparent;
+  border-style: none;
+  margin-top: 20px !important;
+}
+
+.branding-bottom {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}

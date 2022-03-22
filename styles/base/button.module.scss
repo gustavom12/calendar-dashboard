@@ -1,0 +1,15 @@
+.image-button {
+  border-style: none;
+  border-radius: 3px;
+  background-color: #695ee8 !important;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  & svg {
+    height: 16px;
+    color: #fff !important;
+  }
+}

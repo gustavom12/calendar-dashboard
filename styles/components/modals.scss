@@ -1,0 +1,31 @@
+.show-vacancy__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.send-notification__switch {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.share-vacancy {
+  &__link {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+.hiring-navbar {
+  width: 100%;
+  &__user {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}

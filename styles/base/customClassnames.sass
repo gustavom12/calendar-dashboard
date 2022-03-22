@@ -1,0 +1,76 @@
+.flex-center
+  justify-content: center
+  display: flex
+  align-items: center
+  &-important
+    justify-content: center !important
+    display: flex !important
+    align-items: center !important
+
+.flex-right
+  display: flex
+  justify-content: flex-end
+
+.bg-green
+  background: #39E489
+
+.btnGreen
+  background: #39E489
+  text-align: center
+  border-radius: 3px
+  height: 36px
+  display: flex
+  justify-content: center
+  align-items: center
+  color: #262D42
+  font-weight: 600
+  width: 100%
+  &:hover, &:focus
+    color: #181c29 !important
+  &.important
+    background: #39E489 !important
+    text-align: center !important
+    border-radius: 3px !important
+    height: 36px !important
+    display: flex
+    justify-content: center
+    align-items: center
+    color: #262D42
+    font-weight: 600 !important
+
+.btn-violet-inverted-important
+  border-color: #695EE8 !important
+  color: #695EE8 !important
+
+.btn-violet-important
+  background: #695EE8 !important
+  color: #fff !important
+  &:hover, &:focus
+    background: #6359d4 !important
+    border: 1px solid #6359d4 !important
+  &:disabled
+    background: #928bdf !important
+    border: 1px solid #928bdf !important
+
+.gap-20
+  grid-gap: 20px !important
+  gap: 20px !important
+
+.uploadDefaultGM
+  .ant-upload-list-picture-card-container, .ant-upload-select-picture-card
+    width: 100% !important
+    height: 180px
+    .ant-upload-list-item
+      border: none !important
+      padding: 0 !important
+
+.ant-form-item.formItemOne
+  flex-direction: column
+  text-align: left !important
+  align-items: flex-start
+  justify-content: flex-start
+
+  .ant-form-item-required::before
+    display: none !important
+  .ant-form-item-control
+    width: 100%

@@ -1,0 +1,43 @@
+.NotificationPopUp
+    padding: 16px 24px
+    width: 384px
+    box-shadow: 0 3px 6px -4px rgb(0 0 0 / 12%)
+    max-width: calc(100vw - 48px)
+    word-break: break-word
+    display: flex
+    overflow: hidden
+    position: fixed
+    border-radius: 3px
+    justify-content: space-between
+    align-items: center
+    right: -400px
+    bottom: 30px
+    transition: all .5s ease-in-out
+    opacity: 0
+    visibility: none
+    a
+        align-self: flex-start
+        svg
+            height: 15px
+            width: 13px
+    .leftsvg
+        height: 28px
+        width: 28px
+    .text
+        margin-left: 15px
+        margin-right: 12px
+        color: #262d42!important
+        line-height: 24px
+        width: 100%
+    &.error
+        border: 0.5px solid rgb(254, 61, 46)
+        background: rgba(254, 61, 46, 0.1)
+    &.success
+        border: 0.5px solid rgb(57, 228, 137)
+        background: rgba(57, 228, 137, 0.15)
+    &.active
+        right: 30px
+        bottom: 30px
+        transition: all .5s ease-in-out
+        opacity: 1
+        visibility: visible

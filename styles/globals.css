@@ -1,0 +1,52 @@
+@import "~antd/dist/antd.css";
+@import "./components/navbar.css";
+@import "./components/header.css";
+@import "./base/button.css";
+@import "./components/page.css";
+@import "./pages/branding.css";
+@import "./components/folder.css";
+@import "./components/card.css";
+@import "./base/input.css";
+@import "./base/grid.css";
+@import "./pages/candidates.css";
+@import "./pages/calendar.css";
+@import "./views/eventsTypes.css";
+@import "./components/kanban.css";
+@import "./components/dropdown.css";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  display: grid;
+  background-color: #f0f3f4;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.section-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+p {
+  font-size: 12px;
+}

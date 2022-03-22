@@ -1,0 +1,48 @@
+/*
+ __      __        _       _     _           
+ \ \    / /       (_)     | |   | |          
+  \ \  / /_ _ _ __ _  __ _| |__ | | ___  ___ 
+   \ \/ / _` | '__| |/ _` | '_ \| |/ _ \/ __|
+    \  / (_| | |  | | (_| | |_) | |  __/\__ \
+     \/ \__,_|_|  |_|\__,_|_.__/|_|\___||___/
+                                             
+    Fichap style variables.
+*/
+
+$principal-color: #695ee8;
+
+//gray scale
+$gray-700: #161537;
+$gray-600: #262d42;
+$gray-550: #565e7c;
+$gray-500: #868eb7;
+$gray-400: #a1acc2;
+$gray-300: #cad7e6;
+$gray-200: #e4edf0;
+$gray-100: #f0f3f4;
+$gray-50: #f6f8f9;
+
+//B&W
+$white: #fff;
+$black: #262d42;
+
+//positive & negative
+$positive-color: #36d882;
+$principal-color-10: #36d88219;
+$negative-color: #fe3d2e;
+$negative-color-10: #fe3d2e19;
+
+$blue-color: #00a0ff;
+
+//background
+$background: #f0f3f4;
+
+//hover
+$hover-button: #5fe89f;
+
+.bg-white {
+  background-color: #fff;
+}
+.ant-layout-content {
+  min-height: 870px !important;
+}

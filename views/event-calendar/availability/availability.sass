@@ -1,0 +1,101 @@
+.eventCalendar
+  .ant-select-selection-item
+    display: flex
+    align-items: center
+  .topInfo
+    margin: 20px 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .arrow
+      width: 50px
+      height: 36px
+      background: #695ee8c7
+      transition: all linear .3s
+      cursor: pointer
+      display: flex
+      justify-content: center
+      align-items: center
+      &:hover
+        background: #695ee8
+        transition: all linear .3s
+      &.arrow1
+        border-right: 1px solid #695ee8
+        border-top-left-radius: 3px
+        border-bottom-left-radius: 3px
+      &.arrow2
+        border-bottom-right-radius: 3px
+        border-top-right-radius: 3px
+  .right
+    display: flex
+    div
+      height: 36px
+      background: #695ee8c7
+      padding: 0 20px
+      cursor: pointer
+      display: flex
+      justify-content: center
+      align-items: center
+      &:active
+        background: #695ee8
+      &:hover
+        background: #695ee8ea
+        transition: all linear .3s
+      &.week
+        border-right: 1px solid #695ee8
+        border-top-left-radius: 3px
+        border-bottom-left-radius: 3px
+      &.mes
+        border-bottom-right-radius: 3px
+        border-top-right-radius: 3px
+
+  .month
+    width: 100%
+    margin: 0 auto
+    margin-bottom: 40px
+    display: grid
+    text-align: center
+    grid-template-columns: repeat(7, 1fr)
+    border-top: 1.00767px solid #CAD7E6
+    border-left: 1.00767px solid #CAD7E6
+    .dayTitle
+      font-weight: 600 !important
+      height: 25px
+      border-bottom: 1.00767px solid #CAD7E6
+      border-right: 1.00767px solid #CAD7E6
+      width: 100%
+      text-align: center
+      display: flex
+      align-items: center
+      justify-content: center
+    .day
+      text-align: center
+      border-bottom: 1.00767px solid #CAD7E6
+      border-right: 1.00767px solid #CAD7E6
+      font-size: 14.5px
+      height: 100px
+      width: 100%
+      display: flex
+      align-items: center     
+      position: relative
+      &.actual
+        color: #fff
+      &.isNotInMonth
+        color: #CAD7E6
+      &.inMonth
+        font-weight: 500
+        cursor: pointer
+      .dayNumber
+        position: absolute
+        top: 7px
+        right: 12px
+      .ant-btn
+        border: none
+        height: 17px
+        width: 17px
+        display: flex
+        justify-content: center
+        align-items: center
+        position: absolute
+        top: 7px
+        left: 12px

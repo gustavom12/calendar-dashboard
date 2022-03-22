@@ -1,0 +1,22 @@
+.events-type-container {
+  width: 100%;
+}
+
+.events-type-t {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #cad7e6;
+}
+
+.events-type-t h2 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 32px;
+  /* identical to box height */
+
+  color: #161537;
+}

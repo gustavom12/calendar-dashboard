@@ -1,0 +1,43 @@
+@import '../variables';
+
+.action__container {
+  cursor: pointer;
+}
+
+.ant-popconfirm {
+  // width: 150px !important;
+  & .ant-popover-arrow {
+    // left: 75% !important;
+  }
+  & .ant-popover-message span {
+    display: none !important;
+  }
+  & .ant-popover-message-title {
+    color: #262d42 !important;
+    padding: 0 !important;
+  }
+  & .ant-popover-buttons {
+    display: flex;
+    max-width: 150px !important;
+    justify-content: space-around !important;
+    & button {
+      margin: 0 !important;
+      border: 1px solid #262d42;
+      color: #262d42;
+      &:hover {
+        color: #262d42;
+        border: 1px solid #262d42;
+      }
+    }
+    & .ant-btn-primary {
+      background-color: $principal-color !important;
+      border: 1px solid $principal-color !important;
+      &:hover {
+        color: #262d42;
+      }
+    }
+  }
+}
+.ant-tooltip-inner {
+  // color: #262d42 !important;
+}

@@ -1,0 +1,8 @@
+.page-container {
+  box-shadow: 0px 6px 6px 0px #090e250a;
+  padding: 30px;
+  width: 100%;
+  background-color: #fff;
+  margin-top: 20px;
+  border-radius: 5px;
+}

@@ -1,0 +1,220 @@
+@import "../variables";
+
+.login__media {
+  height: 45px;
+  width: 45px;
+  border-style: none;
+  border-radius: 45px;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.fc-color {
+  background-color: #1977f3 !important;
+  &:hover {
+    background-color: #344185 !important;
+  }
+}
+
+.li-color {
+  background-color: #2766bc !important;
+  &:hover {
+    background-color: #30628d !important;
+  }
+}
+
+.g-color {
+  background-color: #f46a6a !important;
+  &:hover {
+    background-color: #883b3b !important;
+  }
+}
+
+.ant-form-item-children-icon {
+  display: none;
+}
+
+.ant-input-suffix {
+  padding: 0 !important;
+
+  & svg {
+    fill: $principal-color;
+  }
+}
+
+.ant-form-item-explain.ant-form-item-explain-error {
+  & div {
+    margin-top: 0 !important;
+  }
+}
+
+.login__bottom {
+  margin: 25px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  &-divisor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 0 25px 0;
+    & div {
+      width: 150px;
+      height: 1px;
+      background-color: $gray-300;
+    }
+
+    & span {
+      color: $gray-500;
+    }
+  }
+
+  &-media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    width: 185px;
+  }
+}
+
+@media (max-width: 500px) {
+  .login-container {
+    padding: 10px 15px !important;
+    h1 {
+      font-size: 23px !important;
+      margin-bottom: 15px !important;
+    }
+    .login-container-b {
+      width: 100%;
+      margin-top: 15px;
+      .login-container-b__form {
+        width: 100%;
+        padding: 30px 25px !important;
+      }
+    }
+    .login-container-t {
+      img {
+        display: none;
+      }
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      height: fit-content !important;
+      padding: 5px 10px 10px 10px !important;
+      .logoContainer {
+        padding-right: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+      }
+      .topBarLinks {
+        justify-content: space-around;
+      }
+    }
+    .login-container-b__form-b {
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      a {
+        margin: 5px 0;
+      }
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+.login-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #f0f3f4;
+  padding: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  &-t {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & a span {
+      color: #132c4a;
+      font-size: 15px;
+
+      & span {
+        font-size: 15px;
+        font-weight: 600;
+        color: $principal-color;
+        margin-left: 5px;
+      }
+    }
+  }
+  &-b {
+    margin-top: 93px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    & h1 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 47px;
+      /* identical to box height */
+
+      text-align: center;
+
+      /* 600 */
+
+      color: #262d42;
+      margin-bottom: 30px;
+    }
+    &__form {
+      padding: 44px 35px;
+      box-shadow: 0px 6px 6px 0px #090e250a;
+      width: 490px;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      border-radius: 5px;
+      & h2 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 33px;
+
+        /* 600 */
+        margin: 0;
+        margin-bottom: 20px;
+        color: #262d42;
+      }
+
+      & button {
+        width: 100%;
+        margin-top: 25px;
+      }
+      &-b {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin-top: 25px;
+        & a {
+          color: #868eb7 !important;
+        }
+      }
+    }
+  }
+}

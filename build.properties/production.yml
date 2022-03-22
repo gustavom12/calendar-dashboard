@@ -1,0 +1,15 @@
+secretsFile:
+  path: /usr/share/nginx/html
+  name: config.js
+  values: |
+
+ingress:
+  hosts:
+    path: /
+    host: recruiting.fichap.com
+
+replicaCount: 2
+
+secrets:
+  NODE_ENV: production
+  NEXT_API_BASE_URL: "https://api.fichap.com"

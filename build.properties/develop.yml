@@ -1,0 +1,16 @@
+secretsFile:
+  path: /usr/share/nginx/html
+  name: config.js
+  values: |
+
+ingress:
+  hosts:
+    path: /
+    host: recruiting-dev.fichap.com
+opendistro:
+  host: kibana-dev.fichap.com
+replicaCount: 1
+
+secrets:
+  NODE_ENV: develop
+  NEXT_API_BASE_URL: "https://api.fichap.com"

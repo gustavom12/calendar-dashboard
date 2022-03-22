@@ -1,0 +1,67 @@
+.configModalCont
+  .days
+    justify-content: space-between
+    margin: 15px 0
+    .day
+      width: 40px
+      height: 40px
+      margin-right: 10px
+      font-size: 18px
+      border-radius: 50%
+      border: 1px solid #CAD7E6
+      color: #CAD7E6
+      cursor: pointer
+      transition: all 0.3s ease-in-out
+      display: flex
+      justify-content: center
+      align-items: center
+      &.active
+        border: 1px solid #CAD7E6
+        color: #fff
+        background: #695EE8
+  .fromtos
+    max-height: 230px
+    overflow-y: auto
+    padding-right: 15px
+    &::-webkit-scrollbar-track
+      box-shadow: 0
+      background: #00000000
+    &::-webkit-scrollbar
+      width: .3em
+
+    &::-webkit-scrollbar-track
+      background: #00000010
+
+    &::-webkit-scrollbar-thumb
+      border-radius: 10px
+      background: #695EE8
+  .fromtoInputs
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 10px 0
+    &.overlaps
+      .ant-picker
+        border: 1px solid #ff0000 !important
+  .fromtosTitle
+    align-items: center
+    display: flex
+    justify-content: space-around
+  .name
+    width: 35px
+  .ant-picker
+    width: 106px
+    color: #000
+    text-align: center
+    .ant-picker-suffix
+      display: none
+    .ant-picker-clear
+      display: none
+    input
+      text-align: center
+    &:focus, &:hover
+      color: #fff
+
+.ant-picker-dropdown
+  .ant-picker-now
+    display: none !important

@@ -1,0 +1,38 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  border-bottom: 1px solid rgb(228, 233, 240);
+  padding: 0 !important;
+  padding-right: 30px !important;
+  /* padding-bottom: 10px !important; */
+}
+
+.navbar-logo {
+  width: 250px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbar-container {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.right-app {
+  background-color: #f0f3f4;
+  transition: width .4s linear;
+  width: 100%;
+  padding: 0px 0px 0px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+/* border-bottom: 1px solid rgb(228, 233, 240); */

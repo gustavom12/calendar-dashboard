@@ -1,0 +1,45 @@
+.loading-view {
+  width: 100%;
+  display: flex;
+  background: #f3f3f3 !important;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 0px); //se calcula la altura - la altura del navbar
+  &:hover {
+    background: #f3f3f3 !important;
+  }
+}
+
+.loader-fichap {
+  border: 5px solid #f3f3f3;
+  // border-top: 5px solid $principal-color;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  animation: fichap-spin 2s linear infinite;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    & img {
+      position: relative;
+      transform: translateY(50px);
+      top: auto;
+      bottom: auto;
+      left: auto;
+      right: auto;
+    }
+  }
+}
+
+@keyframes fichap-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

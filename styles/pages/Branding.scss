@@ -1,0 +1,25 @@
+.branding-bottom-buttons {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hiring-select {
+  width: 100% !important;
+  height: 40px !important;
+}
+
+@media (max-width: 600px) {
+  .employer-branding-grid {
+    grid-template-columns: 1fr !important;
+    grid-template-areas: "b" "a";
+    .employer-branding-grid-c:nth-of-type(1) {
+      grid-area: a;
+    }
+    .employer-branding-grid-c:nth-of-type(2) {
+      grid-area: b;
+    }
+  }
+}
