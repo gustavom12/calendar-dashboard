@@ -83,7 +83,7 @@ const dictionary = {
         START_TODAY: "Comienza hoy",
         LINK: "https://fichap.com/es/contacto",
       },
-      WELCOME: "Bienvenido a Fichap",
+      WELCOME: "Bienvenido!",
       FORM: {
         TITLE: "Ingresa con tus datos",
         EMAIL: "E-mail",
@@ -117,6 +117,7 @@ const dictionary = {
     EMPLOYER_BRANDING: "Marca empleadora",
     CALENDAR: "Calendario",
     ADMINISTRATION: "Adminsitración",
+    AVAILABILITY: "Disponibilidad"
   },
   DASHBOARD: {
     HEADER: "Dashboard",
@@ -465,6 +466,7 @@ const dictionary = {
   },
   CALENDAR: {
     HEADER: "Calendario",
+    AVAILABILITY: "Disponibilidad",
     TABS: {
       EVENTS: "Eventos",
       TYPES: "Tipos de eventos",

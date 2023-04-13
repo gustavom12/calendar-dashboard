@@ -21,14 +21,25 @@ export class EventCalendar {
 
   createUpdateAvailability(body) {
     return new Promise((resolve, reject) => {
-      apiConnection
-        .post(`/users/adminConfig/create`, body)
-        .then(({ data }) => {
-          resolve(data);
-        })
-        .catch((err) => {
-          reject(err);
-        });
+      if (body._id) {
+        apiConnection
+          .patch(`/users/adminConfig/${body._id}`, body)
+          .then(({ data }) => {
+            resolve(data);
+          })
+          .catch((err) => {
+            reject(err);
+          });
+      } else {
+        apiConnection
+          .post(`/users/adminConfig/create`, body)
+          .then(({ data }) => {
+            resolve(data);
+          })
+          .catch((err) => {
+            reject(err);
+          });
+      }
     });
   }
 

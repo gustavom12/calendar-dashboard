@@ -5,8 +5,8 @@ import { notification } from "antd";
 // export const API = env("API_BASE_URL");
 
 const apiConnection = axios.create({
-  // baseURL: "http://localhost"
-  baseURL: "https://api.fichap.com",
+  baseURL: "http://localhost:3001"
+  // baseURL: "https://api.fichap.com",
   // baseURL: env("API_BASE_URL"),
   // baseURL: process.env.REACT_APP_API_BASE_URL,
 });

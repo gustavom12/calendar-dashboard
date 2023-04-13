@@ -4,12 +4,10 @@ import "../styles/globals.css";
 import "../styles/imports.sass";
 import "../styles/global.less";
 import { useRouter } from "next/router";
-import { useEffect, useMemo } from "react";
+import { useMemo } from "react";
 import "react-quill/dist/quill.snow.css";
 import { AuthProvider } from "../contexts/AuthContext";
-import { FolderProvider } from "../contexts/FolderContext";
-import { VacancyProvider } from "../contexts/VacancyContext";
-import { CandidateProvider } from "../contexts/CandidateContext";
+// import { CandidateProvider } from "../contexts/CandidateContext";
 import { MenuProvider } from "../contexts/MenuContext";
 import { NotificationProvider } from "../contexts/NotificationContext";
 import Notification from "../base/Notification.base";
@@ -36,11 +34,9 @@ function MyApp({ Component, pageProps }) {
         <AuthProvider>
           <MenuProvider>
             <CompanyProvider>
-              <CandidateProvider>
-                <FolderProvider>
-                  <VacancyProvider>{renderApp}</VacancyProvider>
-                </FolderProvider>
-              </CandidateProvider>
+              {/* <CandidateProvider> */}
+              {renderApp}
+              {/* </CandidateProvider> */}
             </CompanyProvider>
           </MenuProvider>
         </AuthProvider>

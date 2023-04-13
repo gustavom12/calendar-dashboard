@@ -5,7 +5,9 @@ import moment from "moment";
 import { Button } from "antd";
 import { FormattedMessage } from "../../translate/fake_react_intl";
 import SelectTimezone from "./selectTimezone";
-import {useTranslation} from "../../../../contexts/LocalizeContext"
+import { useTranslation } from "../../../../contexts/LocalizeContext";
+import Day from "./Day/Day";
+import UpdateDay from "./Day/UpdateDay";
 
 function Month({
   days,
@@ -14,14 +16,27 @@ function Month({
   setSelectedDay,
   selectedMonth,
   setSelectedMonth,
+  setDaysConfig,
   daysConfig,
   setConfigModal,
   timezone,
+  selectedDayModal,
+  setSelectedDayModal,
+  singleDayConfigs,
   setTimezone,
 }) {
   const { selectedLocale } = useTranslation();
   return (
     <>
+      <UpdateDay
+        selectedDayModal={selectedDayModal}
+        setSelectedDayModal={setSelectedDayModal}
+        selectedDay={selectedDay}
+        setSelectedDay={setSelectedDay}
+        setDaysConfig={setDaysConfig}
+        daysConfig={daysConfig}
+        timezone={timezone}
+      />
       <div className="topInfo">
         <div className="arrows d-flex">
           <span
@@ -93,50 +108,16 @@ function Month({
           {intl.formatMessage({ selectedLocale, id: "_day6" })}
         </span>
         {days.map((day, i) => (
-          <div
+          <Day
+            setSelectedDay={setSelectedDay}
             key={i}
-            style={{
-              transition: "all linear .3s",
-            }}
-            className={`
-            day text-center flex-center
-            ${!day.isInCurrentMonth ? "isNotInMonth" : "inMonth text-main"}
-            ${
-              day.isInCurrentMonth &&
-              day.date.valueOf() >= moment().subtract(1, "days").valueOf() &&
-              "available"
-            }`}
-            onClick={() => {
-              if (day.isInCurrentMonth) {
-                // && day.date.valueOf() >= moment().subtract(1, "days").valueOf()
-                setSelectedDay(day.date.clone());
-              }
-            }}
-          >
-            <span className="dayNumber">{day.date.format("DD")}</span>
-            <span>
-              {" "}
-              {daysConfig[day.date.weekday()]?.config?.map(
-                (fromTo, i) =>
-                  daysConfig[day.date.weekday()].active &&
-                  !daysConfig[day.date.weekday()].default && (
-                    <div
-                      className="fromto"
-                      style={{
-                        color: "#868EB7",
-                        fontWeight: "400",
-                        fontSize: 14,
-                      }}
-                      key={i}
-                    >
-                      <span>{fromTo.fromFormat} </span>
-                      <span> - </span>
-                      <span>{fromTo.toFormat}</span>
-                    </div>
-                  )
-              )}{" "}
-            </span>
-          </div>
+            day={day}
+            selectedDay={selectedDay}
+            daysConfig={daysConfig}
+            setSelectedDayModal={setSelectedDayModal}
+            singleDayConfigs={singleDayConfigs}
+            timezone={timezone}
+          />
         ))}
       </div>
       <SelectTimezone timezone={timezone} setTimezone={setTimezone} />

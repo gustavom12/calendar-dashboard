@@ -1,35 +1,38 @@
-import React, { useState, useEffect } from 'react'
-import { FormattedMessage } from '../../../translate/fake_react_intl'
-import { addMinutes, toMiliseconds } from '../../../helpers/momentHelpers'
-import FromTo from './fromTo'
+import React from "react";
+import FromTo from "./fromTo";
 
-function FromToDay({ day, i, setDaysConfig, daysConfig, setAnyOverlaps }) {
+function FromToDay({
+  day,
+  i,
+  setDaysConfig,
+  daysConfig,
+  setAnyOverlaps,
+  isSingleDay = false,
+}) {
   const handleChange = (i, i2, key, val) => {
-    setDaysConfig(v =>
-      ({
+    if (isSingleDay) {
+      setDaysConfig((v) => ({
+        ...v,
+        updated: true,
+        config: v.config.map((el, ind) =>
+          ind === i2 ? { ...el, [key]: val.format("HH:mm") } : el
+        ),
+      }));
+    } else {
+      setDaysConfig((v) => ({
         ...v,
         [i]: {
           ...v[i],
           config: v[i].config.map((el, ind) =>
-            ind === i2 ? { ...el, [key]: val.format('HH:mm') } : el,
+            ind === i2 ? { ...el, [key]: val.format("HH:mm") } : el
           ),
         },
-      }),
-    )
-  }
+      }));
+    }
+  };
 
   return (
     <>
-      {i === 0 && (
-        <div className="fromtosTitle mb-2">
-          <div>
-            <FormattedMessage id="Start" />
-          </div>
-          <div>
-            <FormattedMessage id="End" />
-          </div>
-        </div>
-      )}
       {day.config.map((fromTo, i2) => (
         <FromTo
           i2={i2}
@@ -38,12 +41,13 @@ function FromToDay({ day, i, setDaysConfig, daysConfig, setAnyOverlaps }) {
           daysConfig={daysConfig}
           setDaysConfig={setDaysConfig}
           handleChange={handleChange}
+          isSingleDay={isSingleDay}
           fromTo={fromTo}
           i={i}
           setAnyOverlaps={setAnyOverlaps}
         />
       ))}
     </>
-  )
+  );
 }
-export default FromToDay
+export default FromToDay;

@@ -8,7 +8,7 @@ export default function Header({ title, children, withBackbutton }) {
   return (
     <>
       <Head>
-        <title>Fichap hiring | {title}</title>
+        <title> Turnos | {title}</title>
       </Head>
       <div className="header-container">
         <div className="header-container-l">

@@ -36,7 +36,7 @@ export default function LeftMenu() {
           windowWidth < 600 && "mobile"
         }`}
       >
-        <div className="left-menu-icon">
+        {/* <div className="left-menu-icon">
           <Link href="/dashboard">
             <a>
               {collapsed ? (
@@ -50,7 +50,7 @@ export default function LeftMenu() {
               )}
             </a>
           </Link>
-        </div>
+        </div> */}
         {collapsed && (
           <div
             className="left-menu-hiring"

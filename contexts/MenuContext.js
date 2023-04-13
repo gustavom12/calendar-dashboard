@@ -1,63 +1,69 @@
 import React, { createContext, useContext, useState } from "react";
 import {
-  Grid,
   PieChart,
-  Briefcase,
-  UserPlus,
-  List,
   Calendar,
-  Sliders,
+  Bookmark,
+  Layers,
+  MessageCircle,
+  Settings
 } from "react-feather";
-import Marca from "/assets/marca"
 
 const items = [
-  {
-    key: "/dashboard",
-    icon: {
-      type: "component",
-      value: <PieChart />,
-    },
-    translationKey: "DASHBOARD",
-  },
-  {
-    key: "/vacancies",
-    icon: {
-      type: "component",
-      value: <Briefcase />,
-    },
-    translationKey: "VACANCIES",
-  },
-  {
-    key: "/candidates",
-    icon: {
-      type: "component",
-      value: <UserPlus />,
-    },
-    translationKey: "CANDIDATES",
-  },
-  {
-    key: "/employer-branding",
-    icon: {
-      type: "component",
-      value: <Marca />,
-    },
-    translationKey: "EMPLOYER_BRANDING",
-  },
+  // {
+  //   key: "/dashboard",
+  //   icon: {
+  //     type: "component",
+  //     value: <PieChart />,
+  //   },
+  //   translationKey: "DASHBOARD",
+  // },
   {
     key: "/calendar",
     icon: {
       type: "component",
-      value: <Calendar />,
+      value: <Bookmark />,
     },
     translationKey: "CALENDAR",
   },
+  {
+    key: "/availability",
+    icon: {
+      type: "component",
+      value: <Calendar />,
+    },
+    translationKey: "AVAILABILITY",
+  },
+  {
+    key: "/events",
+    icon: {
+      type: "component",
+      value: <Layers />,
+    },
+    translationKey: "events",
+  },
+  {
+    key: "/settings",
+    icon: {
+      type: "component",
+      value: <Settings />,
+    },
+    translationKey: "Configuración",
+  },
   // {
-  //   key: "/administration",
+  //   key: "/message",
   //   icon: {
   //     type: "component",
-  //     value: <Sliders />,
+  //     value: <MessageCircle />,
   //   },
-  //   translationKey: "ADMINISTRATION",
+  //   translationKey: "Messages",
+  // },
+  // {
+  //   key: "/employer-branding",
+  //   icon: {
+  //     type: "component",
+  //     value: <Marca />,
+  //   },
+  //   translationKey: "EMPLOYER_BRANDING",
   // },
 ];
 

@@ -9,12 +9,15 @@ const AuthContext = createContext({
   logout: () => {},
   user: {},
   session: "",
+  company: {},
+  setCompany: () => {},
 });
 
 export const AuthProvider = ({ children }) => {
   const { route, push } = useRouter();
   const [session, setSession] = useState("");
   const [user, setUser] = useState({});
+  const [company, setCompany] = useState({});
   const { AUTH } = useTranslation();
   const { success, error } = useNotificationData();
 
@@ -23,6 +26,12 @@ export const AuthProvider = ({ children }) => {
       const user = JSON.parse(localStorage.getItem("userData"));
       if (user) {
         setUser(user);
+        apiConnection
+          .get(`/company/${user.companyId}`)
+          .then(({ data }) => {
+            setCompany(data);
+          })
+          .catch(console.log);
       }
     } catch (err) {
       console.error(err);
@@ -31,7 +40,7 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     if (localStorage.getItem("accessToken") && route === "/") {
-      push("/dashboard");
+      push("/");
     }
     if (!localStorage.getItem("accessToken") && route != "/") {
       push("/");
@@ -39,27 +48,37 @@ export const AuthProvider = ({ children }) => {
   }, [route]);
 
   const login = (user, password) => {
-    apiConnection
-      .post("/auth/v1/login", { user, password })
-      .then(({ data }) => {
-        console.log(data);
-        localStorage.setItem("accessToken", data.data.accessToken);
-        setSession(data.data.accessToken);
-        success(AUTH.LOGIN.RESPONSE.SUCCESS);
-        apiConnection
-          .get("/users/profile/get")
-          .then(({ data }) => {
-            setUser(data.data);
-            localStorage.setItem("userData", JSON.stringify(data.data));
-            push("/dashboard");
-          })
-          .catch((err) => console.error(err));
-      })
-      .catch((err) => {
-        // TODO: Mostrar error mas descriptivo, (traducir en base al response)
-        error(AUTH.LOGIN.RESPONSE.COMMON_ERROR);
-        console.error(err);
-      });
+    if (user === "barbermank" && password === "Gg123123")
+      apiConnection
+        .post("/auth/v1/login", { user, password })
+        .then(({ data }) => {
+          console.log({ data });
+          localStorage.setItem("accessToken", data.accessToken);
+          setSession(data.accessToken);
+          success(AUTH.LOGIN.RESPONSE.SUCCESS);
+          apiConnection
+            .get("/users/profile/get")
+            .then(({ data }) => {
+              setUser(data.data);
+              apiConnection
+                .get(`/company/${user.companyId}`)
+                .then(({ data }) => {
+                  setCompany(data);
+                })
+                .catch(console.log);
+              localStorage.setItem("userData", JSON.stringify(data.data));
+              push("/calendar");
+            })
+            .catch((err) => console.error(err));
+        })
+        .catch((err) => {
+          // TODO: Mostrar error mas descriptivo, (traducir en base al response)
+          error(AUTH.LOGIN.RESPONSE.COMMON_ERROR);
+          console.error(err);
+        });
+    else {
+      error("Usuario o contraseña inválida");
+    }
   };
 
   const logout = () => {
@@ -67,7 +86,7 @@ export const AuthProvider = ({ children }) => {
     push("/");
   };
 
-  const context = { login, logout, user, session };
+  const context = { login, logout, user, session, company, setCompany };
 
   return (
     <AuthContext.Provider value={context}>{children}</AuthContext.Provider>

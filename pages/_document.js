@@ -16,10 +16,6 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Mukta:300,400,500,700,800&display=swap"
             rel="stylesheet"
           />
-          <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9JHUyupozNNbADOmNQzFSSMoAheekvGM&callback=initMap&v=weekly&libraries=places"
-            async
-          />
         </Head>
         <body className="font-sans">
           <Main />

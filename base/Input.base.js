@@ -11,6 +11,7 @@ export default function Input({
   type = "text",
   value,
   disabled,
+  ...props
 }) {
   const { GLOBAL } = useTranslation();
   return (
@@ -34,6 +35,7 @@ export default function Input({
           className="input-b"
           placeholder={placeholder || GLOBAL.PLACEHOLDER}
           onChange={(v) => onChange(v.target.value)}
+          {...props}
         />
       )}
     </div>
